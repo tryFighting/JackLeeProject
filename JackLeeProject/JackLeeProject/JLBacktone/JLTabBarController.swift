@@ -32,6 +32,7 @@ class JLTabBarController: UITabBarController {
         messageVC.tabBarItem.selectedImage = UIImage(named: "V5FootInfoSel")
         
         let homeNav = createNavigationController(homeVC)
+        homeNav.navigationBar.hideBottomHairline()
         let searchNav = createNavigationController(searchVC)
         let messageNav = createNavigationController(messageVC)
         self.viewControllers = [homeNav,searchNav,messageNav]
