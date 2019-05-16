@@ -10,6 +10,17 @@
 		03EDA41A59059F02834890A1 /* Pods_JackLeeProjectUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86753B6CE19492C22C2A4BBD /* Pods_JackLeeProjectUITests.framework */; };
 		30D301F44255479C6B288BDD /* Pods_JackLeeProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D2BF6261BAC39059FB65142 /* Pods_JackLeeProject.framework */; };
 		41F007070302CE6DAF55382E /* Pods_JackLeeProjectTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EE5093C8A8CC5EEA163FB7D /* Pods_JackLeeProjectTests.framework */; };
+		7B522473228D049500775A70 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B522472228D049500775A70 /* TestViewController.swift */; };
+		7B522475228D38FB00775A70 /* JLRecommendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B522474228D38FB00775A70 /* JLRecommendViewController.swift */; };
+		7B522477228D391200775A70 /* JLClassifyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B522476228D391200775A70 /* JLClassifyViewController.swift */; };
+		7B522479228D392B00775A70 /* JLVIPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B522478228D392B00775A70 /* JLVIPViewController.swift */; };
+		7B52247B228D393A00775A70 /* JLLiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B52247A228D393A00775A70 /* JLLiveViewController.swift */; };
+		7B52247D228D394A00775A70 /* JLBrocastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B52247C228D394A00775A70 /* JLBrocastViewController.swift */; };
+		7B52247F228D3FE300775A70 /* JLRecommendModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B52247E228D3FE300775A70 /* JLRecommendModel.swift */; };
+		7B522481228D4A0100775A70 /* JLRecommandHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B522480228D4A0100775A70 /* JLRecommandHeaderView.swift */; };
+		7B522483228D4A2700775A70 /* JLRecommandFootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B522482228D4A2700775A70 /* JLRecommandFootView.swift */; };
+		7B522485228D4ED800775A70 /* JLRecommendHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B522484228D4ED800775A70 /* JLRecommendHeaderCell.swift */; };
+		7B522488228D522C00775A70 /* JLRecommandViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B522487228D522C00775A70 /* JLRecommandViewModel.swift */; };
 		7B9BE4AB2178229A0010F071 /* UINavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9BE4AA2178229A0010F071 /* UINavigationBar.swift */; };
 		7B9BE4AE21782CAA0010F071 /* JLAudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9BE4AD21782CAA0010F071 /* JLAudioManager.swift */; };
 		7B9BE4B021782DAE0010F071 /* JLSettingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9BE4AF21782DAE0010F071 /* JLSettingManager.swift */; };
@@ -58,6 +69,17 @@
 		3EE5093C8A8CC5EEA163FB7D /* Pods_JackLeeProjectTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JackLeeProjectTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D2BF6261BAC39059FB65142 /* Pods_JackLeeProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JackLeeProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AE72EE9893897A2D32075AA /* Pods-JackLeeProjectUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JackLeeProjectUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-JackLeeProjectUITests/Pods-JackLeeProjectUITests.release.xcconfig"; sourceTree = "<group>"; };
+		7B522472228D049500775A70 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
+		7B522474228D38FB00775A70 /* JLRecommendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JLRecommendViewController.swift; sourceTree = "<group>"; };
+		7B522476228D391200775A70 /* JLClassifyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JLClassifyViewController.swift; sourceTree = "<group>"; };
+		7B522478228D392B00775A70 /* JLVIPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JLVIPViewController.swift; sourceTree = "<group>"; };
+		7B52247A228D393A00775A70 /* JLLiveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JLLiveViewController.swift; sourceTree = "<group>"; };
+		7B52247C228D394A00775A70 /* JLBrocastViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JLBrocastViewController.swift; sourceTree = "<group>"; };
+		7B52247E228D3FE300775A70 /* JLRecommendModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JLRecommendModel.swift; sourceTree = "<group>"; };
+		7B522480228D4A0100775A70 /* JLRecommandHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JLRecommandHeaderView.swift; sourceTree = "<group>"; };
+		7B522482228D4A2700775A70 /* JLRecommandFootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JLRecommandFootView.swift; sourceTree = "<group>"; };
+		7B522484228D4ED800775A70 /* JLRecommendHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JLRecommendHeaderCell.swift; sourceTree = "<group>"; };
+		7B522487228D522C00775A70 /* JLRecommandViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JLRecommandViewModel.swift; sourceTree = "<group>"; };
 		7B9BE4AA2178229A0010F071 /* UINavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationBar.swift; sourceTree = "<group>"; };
 		7B9BE4AD21782CAA0010F071 /* JLAudioManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JLAudioManager.swift; sourceTree = "<group>"; };
 		7B9BE4AF21782DAE0010F071 /* JLSettingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JLSettingManager.swift; sourceTree = "<group>"; };
@@ -119,6 +141,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7B522486228D51C000775A70 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				7B522487228D522C00775A70 /* JLRecommandViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		7B9BE4AC21782C620010F071 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
@@ -216,6 +246,7 @@
 		7BAB97F22177402F00F351BC /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				7B522486228D51C000775A70 /* ViewModel */,
 				7BAB97F32177402F00F351BC /* Controller */,
 				7BAB97F52177402F00F351BC /* Model */,
 				7BAB97F62177402F00F351BC /* View */,
@@ -227,6 +258,12 @@
 			isa = PBXGroup;
 			children = (
 				7BAB97F42177402F00F351BC /* HomeViewController.swift */,
+				7B522474228D38FB00775A70 /* JLRecommendViewController.swift */,
+				7B522476228D391200775A70 /* JLClassifyViewController.swift */,
+				7B522478228D392B00775A70 /* JLVIPViewController.swift */,
+				7B52247A228D393A00775A70 /* JLLiveViewController.swift */,
+				7B52247C228D394A00775A70 /* JLBrocastViewController.swift */,
+				7B522472228D049500775A70 /* TestViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -235,6 +272,7 @@
 			isa = PBXGroup;
 			children = (
 				7BAB980C217740DA00F351BC /* HomeModel.swift */,
+				7B52247E228D3FE300775A70 /* JLRecommendModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -243,6 +281,9 @@
 			isa = PBXGroup;
 			children = (
 				7BAB980A217740C200F351BC /* HomeView.swift */,
+				7B522480228D4A0100775A70 /* JLRecommandHeaderView.swift */,
+				7B522482228D4A2700775A70 /* JLRecommandFootView.swift */,
+				7B522484228D4ED800775A70 /* JLRecommendHeaderCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -496,12 +537,16 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-JackLeeProject/Pods-JackLeeProject-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/DNSPageView/DNSPageView.framework",
+				"${BUILT_PRODUCTS_DIR}/FSPagerView/FSPagerView.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DNSPageView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FSPagerView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
@@ -553,9 +598,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B522477228D391200775A70 /* JLClassifyViewController.swift in Sources */,
+				7B522485228D4ED800775A70 /* JLRecommendHeaderCell.swift in Sources */,
 				7B9BE4B021782DAE0010F071 /* JLSettingManager.swift in Sources */,
+				7B52247F228D3FE300775A70 /* JLRecommendModel.swift in Sources */,
+				7B52247B228D393A00775A70 /* JLLiveViewController.swift in Sources */,
+				7B522488228D522C00775A70 /* JLRecommandViewModel.swift in Sources */,
+				7B522479228D392B00775A70 /* JLVIPViewController.swift in Sources */,
+				7B522483228D4A2700775A70 /* JLRecommandFootView.swift in Sources */,
 				7BAB980F217740EB00F351BC /* SearchModel.swift in Sources */,
 				7BAB9809217740AD00F351BC /* SearchView.swift in Sources */,
+				7B522481228D4A0100775A70 /* JLRecommandHeaderView.swift in Sources */,
 				7B9BE4AE21782CAA0010F071 /* JLAudioManager.swift in Sources */,
 				7BAB98012177405A00F351BC /* SearchViewController.swift in Sources */,
 				7BAB97F72177402F00F351BC /* HomeViewController.swift in Sources */,
@@ -568,7 +621,10 @@
 				7BAB97B92177377F00F351BC /* AppDelegate.swift in Sources */,
 				7B9BE4AB2178229A0010F071 /* UINavigationBar.swift in Sources */,
 				7BAB97E82177387A00F351BC /* JLTabBarController.swift in Sources */,
+				7B522475228D38FB00775A70 /* JLRecommendViewController.swift in Sources */,
 				7BAB98032177406700F351BC /* MessageViewController.swift in Sources */,
+				7B522473228D049500775A70 /* TestViewController.swift in Sources */,
+				7B52247D228D394A00775A70 /* JLBrocastViewController.swift in Sources */,
 				7B9BE4B221782DC70010F071 /* JLNetworkManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -748,6 +804,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 98298VBF9J;
+				ENABLE_BITCODE = YES;
 				INFOPLIST_FILE = JackLeeProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.maodao.www;
@@ -767,8 +824,10 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 98298VBF9J;
+				ENABLE_BITCODE = YES;
 				INFOPLIST_FILE = JackLeeProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.maodao.www;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "";

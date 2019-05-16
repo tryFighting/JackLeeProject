@@ -7,6 +7,11 @@ target 'JackLeeProject' do
 pod 'Alamofire', '~> 4.7.3'
 pod 'SwiftyJSON'
 pod 'SnapKit'
+#banner滚动图片
+pod 'FSPagerView'
+# 分页
+pod 'DNSPageView', '~> 1.0.1'
+#pod 'HandyJSON','~> 4.2.0-beta1'
 # Pods for JackLeeProject
 
   target 'JackLeeProjectTests' do
