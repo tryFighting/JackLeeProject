@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -43,6 +43,12 @@
 		7BAB980B217740C200F351BC /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BAB980A217740C200F351BC /* HomeView.swift */; };
 		7BAB980D217740DA00F351BC /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BAB980C217740DA00F351BC /* HomeModel.swift */; };
 		7BAB980F217740EB00F351BC /* SearchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BAB980E217740EB00F351BC /* SearchModel.swift */; };
+		7BBD05CC22A0DA06003B0611 /* URefresh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BBD05CB22A0DA06003B0611 /* URefresh.swift */; };
+		7BBD05CF22A11885003B0611 /* JLMyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BBD05CE22A11885003B0611 /* JLMyController.swift */; };
+		7BBD05D122A11A8B003B0611 /* JLMyHeadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BBD05D022A11A8B003B0611 /* JLMyHeadView.swift */; };
+		7BBD05D322A11B7A003B0611 /* JLMyVipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BBD05D222A11B7A003B0611 /* JLMyVipView.swift */; };
+		7BBD05D522A12A70003B0611 /* MyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BBD05D422A12A70003B0611 /* MyTableViewCell.swift */; };
+		7BBD05D722A12D14003B0611 /* JLLayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BBD05D622A12D14003B0611 /* JLLayerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,6 +114,12 @@
 		7BAB980A217740C200F351BC /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		7BAB980C217740DA00F351BC /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
 		7BAB980E217740EB00F351BC /* SearchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchModel.swift; sourceTree = "<group>"; };
+		7BBD05CB22A0DA06003B0611 /* URefresh.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URefresh.swift; sourceTree = "<group>"; };
+		7BBD05CE22A11885003B0611 /* JLMyController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JLMyController.swift; sourceTree = "<group>"; };
+		7BBD05D022A11A8B003B0611 /* JLMyHeadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JLMyHeadView.swift; sourceTree = "<group>"; };
+		7BBD05D222A11B7A003B0611 /* JLMyVipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JLMyVipView.swift; sourceTree = "<group>"; };
+		7BBD05D422A12A70003B0611 /* MyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTableViewCell.swift; sourceTree = "<group>"; };
+		7BBD05D622A12D14003B0611 /* JLLayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JLLayerView.swift; sourceTree = "<group>"; };
 		86753B6CE19492C22C2A4BBD /* Pods_JackLeeProjectUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JackLeeProjectUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BAF7A16C0F943D03B9F9E18 /* Pods-JackLeeProjectTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JackLeeProjectTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-JackLeeProjectTests/Pods-JackLeeProjectTests.release.xcconfig"; sourceTree = "<group>"; };
 		D740C672C322AF04C0FCA380 /* Pods-JackLeeProjectTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JackLeeProjectTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JackLeeProjectTests/Pods-JackLeeProjectTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -186,6 +198,7 @@
 			children = (
 				7BAB97B82177377F00F351BC /* AppDelegate.swift */,
 				7BAB97BA2177377F00F351BC /* ViewController.swift */,
+				7BBD05CA22A0D78D003B0611 /* Tools */,
 				7B9BE4AC21782C620010F071 /* Managers */,
 				7BAB97EC21773E9800F351BC /* JLControllers */,
 				7BAB97E92177393F00F351BC /* JLBase */,
@@ -236,6 +249,7 @@
 		7BAB97EC21773E9800F351BC /* JLControllers */ = {
 			isa = PBXGroup;
 			children = (
+				7BBD05CD22A11869003B0611 /* My */,
 				7BAB97FC2177404500F351BC /* Message */,
 				7BAB97F82177403B00F351BC /* Search */,
 				7BAB97F22177402F00F351BC /* Home */,
@@ -354,6 +368,26 @@
 				7BAB98062177409800F351BC /* MessageView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		7BBD05CA22A0D78D003B0611 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				7BBD05CB22A0DA06003B0611 /* URefresh.swift */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		7BBD05CD22A11869003B0611 /* My */ = {
+			isa = PBXGroup;
+			children = (
+				7BBD05CE22A11885003B0611 /* JLMyController.swift */,
+				7BBD05D022A11A8B003B0611 /* JLMyHeadView.swift */,
+				7BBD05D222A11B7A003B0611 /* JLMyVipView.swift */,
+				7BBD05D422A12A70003B0611 /* MyTableViewCell.swift */,
+				7BBD05D622A12D14003B0611 /* JLLayerView.swift */,
+			);
+			path = My;
 			sourceTree = "<group>";
 		};
 		B23DCEEDCBD61EF42CE051FC /* Pods */ = {
@@ -534,25 +568,16 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-JackLeeProject/Pods-JackLeeProject-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/DNSPageView/DNSPageView.framework",
-				"${BUILT_PRODUCTS_DIR}/FSPagerView/FSPagerView.framework",
-				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-JackLeeProject/Pods-JackLeeProject-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DNSPageView.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FSPagerView.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-JackLeeProject/Pods-JackLeeProject-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JackLeeProject/Pods-JackLeeProject-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-JackLeeProject/Pods-JackLeeProject-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		AC999222433F6B5945E2E419 /* [CP] Check Pods Manifest.lock */ = {
@@ -605,14 +630,20 @@
 				7B52247B228D393A00775A70 /* JLLiveViewController.swift in Sources */,
 				7B522488228D522C00775A70 /* JLRecommandViewModel.swift in Sources */,
 				7B522479228D392B00775A70 /* JLVIPViewController.swift in Sources */,
+				7BBD05CF22A11885003B0611 /* JLMyController.swift in Sources */,
 				7B522483228D4A2700775A70 /* JLRecommandFootView.swift in Sources */,
 				7BAB980F217740EB00F351BC /* SearchModel.swift in Sources */,
+				7BBD05D722A12D14003B0611 /* JLLayerView.swift in Sources */,
 				7BAB9809217740AD00F351BC /* SearchView.swift in Sources */,
 				7B522481228D4A0100775A70 /* JLRecommandHeaderView.swift in Sources */,
 				7B9BE4AE21782CAA0010F071 /* JLAudioManager.swift in Sources */,
 				7BAB98012177405A00F351BC /* SearchViewController.swift in Sources */,
+				7BBD05D522A12A70003B0611 /* MyTableViewCell.swift in Sources */,
+				7BBD05CC22A0DA06003B0611 /* URefresh.swift in Sources */,
 				7BAB97F72177402F00F351BC /* HomeViewController.swift in Sources */,
+				7BBD05D122A11A8B003B0611 /* JLMyHeadView.swift in Sources */,
 				7BAB97BB2177377F00F351BC /* ViewController.swift in Sources */,
+				7BBD05D322A11B7A003B0611 /* JLMyVipView.swift in Sources */,
 				7BAB98072177409800F351BC /* MessageView.swift in Sources */,
 				7BAB980B217740C200F351BC /* HomeView.swift in Sources */,
 				7BAB98052177408200F351BC /* MessageModel.swift in Sources */,
@@ -806,7 +837,10 @@
 				DEVELOPMENT_TEAM = 98298VBF9J;
 				ENABLE_BITCODE = YES;
 				INFOPLIST_FILE = JackLeeProject/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.maodao.www;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
@@ -826,7 +860,10 @@
 				DEVELOPMENT_TEAM = 98298VBF9J;
 				ENABLE_BITCODE = YES;
 				INFOPLIST_FILE = JackLeeProject/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.maodao.www;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -845,7 +882,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 98298VBF9J;
 				INFOPLIST_FILE = JackLeeProjectTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = md.JackLeeProjectTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -863,7 +904,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 98298VBF9J;
 				INFOPLIST_FILE = JackLeeProjectTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = md.JackLeeProjectTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -880,7 +925,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 98298VBF9J;
 				INFOPLIST_FILE = JackLeeProjectUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = md.JackLeeProjectUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -897,7 +946,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 98298VBF9J;
 				INFOPLIST_FILE = JackLeeProjectUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = md.JackLeeProjectUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;

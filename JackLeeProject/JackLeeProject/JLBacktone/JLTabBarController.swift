@@ -31,11 +31,17 @@ class JLTabBarController: UITabBarController {
         messageVC.tabBarItem.image = UIImage(named: "V5FootInfo")
         messageVC.tabBarItem.selectedImage = UIImage(named: "V5FootInfoSel")
         
+        let my = JLMyController()
+        my.tabBarItem.title = "信息"
+        my.tabBarItem.image = UIImage(named: "V5FootInfo")
+        my.tabBarItem.selectedImage = UIImage(named: "V5FootInfoSel")
+        
         let homeNav = createNavigationController(homeVC)
         homeNav.navigationBar.hideBottomHairline()
         let searchNav = createNavigationController(searchVC)
         let messageNav = createNavigationController(messageVC)
-        self.viewControllers = [homeNav,searchNav,messageNav]
+        let myNav = createNavigationController(my)
+        self.viewControllers = [messageNav,searchNav,homeNav,myNav]
         
     }
     

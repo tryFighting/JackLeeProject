@@ -7,7 +7,11 @@
 //
 
 import UIKit
-
+import SwiftyJSON
+import HandyJSON
 class JLRecommandViewModel: NSObject {
+    //数据模型
+    var homeRecommendModel: JLRecommandModel?
+    
 
 }

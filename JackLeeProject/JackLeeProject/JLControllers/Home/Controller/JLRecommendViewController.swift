@@ -36,8 +36,8 @@ class JLRecommendViewController: JLBaseViewController {
     lazy var collectionView: UICollectionView = {
         let layout  = UICollectionViewFlowLayout.init()
         let collection = UICollectionView.init(frame: .zero, collectionViewLayout: layout)
-        collection.delegate = self
-        collection.dataSource = self
+//        collection.delegate = self
+//        collection.dataSource = self
         collection.backgroundColor = UIColor.white
         ///注册头视图和尾视图
        collection.register(JLRecommandHeaderView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: JLRecommendHeaderViewID)
@@ -47,10 +47,18 @@ class JLRecommendViewController: JLBaseViewController {
         //注册不同区分的cell
         //默认
         collection.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "cell")
-        
-        collection.register(JLRecommendHeaderCell.self, forCellWithReuseIdentifier: "cell")
         collection.register(JLRecommendHeaderCell.self, forCellWithReuseIdentifier: JLRecommandHeaderCellID)
+        //猜你喜欢
         
+        //热门有声书
+        
+        //广告
+        
+        //懒人电台
+        
+        //为您推荐
+        
+        //推荐直播
 
         return collection
     }()
@@ -62,6 +70,16 @@ class JLRecommendViewController: JLBaseViewController {
         super.viewDidLoad()
         //添加滑动视图 collectionview
         view.addSubview(self.collectionView)
+       // self.collectionView.uHead.beginRefreshing()
+        
+    }
+    /// 加载首页数据
+    func setupLoadData(){
+        
+    }
+    ///首页穿插广告请求
+    func setupLoadRecommendAdData() -> () {
+        
     }
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
