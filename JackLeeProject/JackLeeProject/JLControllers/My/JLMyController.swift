@@ -116,6 +116,24 @@ extension JLMyController: UITableViewDelegate,UITableViewDataSource{
         headerView.backgroundColor = UIColor.red
         return headerView
     }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        ///测试算法
+        test()
+    }
+    
+}
+
+/// 归并排序
+/*
+ 归并排序是创建在归并操作上的一种有序的排序算法，效率为O(nlogn)
+ 该算法是采用分治法递归可以同时进行，归并操作也叫归并算法，指的是将两个已经排序好的序列合并成一个序列的操作，归并操作也叫归并归并算法，指的是将两个已经排好序的序列合并成一个序列的操作。归并排序算法依赖归并操作
+ 思路：
+ 1.将序列每两个数字进行归并操作，形成floor(n/2)个序列，排序后每个序列包含两个元素
+ 2.将上述序列再次归并，形成floor(n/4)个序列，每个序列包含四个元素
+ 3.重复步骤2，直到所有元素排序完毕
+ 
+ */
+fileprivate func test(){
     
 }
 extension JLMyController: JLMyHeadViewDelegate{
