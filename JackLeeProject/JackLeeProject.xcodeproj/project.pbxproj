@@ -21,6 +21,7 @@
 		7B522483228D4A2700775A70 /* JLRecommandFootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B522482228D4A2700775A70 /* JLRecommandFootView.swift */; };
 		7B522485228D4ED800775A70 /* JLRecommendHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B522484228D4ED800775A70 /* JLRecommendHeaderCell.swift */; };
 		7B522488228D522C00775A70 /* JLRecommandViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B522487228D522C00775A70 /* JLRecommandViewModel.swift */; };
+		7B6227AB22EFF32D00343D37 /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B6227AA22EFF32D00343D37 /* 1.png */; };
 		7B9BE4AB2178229A0010F071 /* UINavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9BE4AA2178229A0010F071 /* UINavigationBar.swift */; };
 		7B9BE4AE21782CAA0010F071 /* JLAudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9BE4AD21782CAA0010F071 /* JLAudioManager.swift */; };
 		7B9BE4B021782DAE0010F071 /* JLSettingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9BE4AF21782DAE0010F071 /* JLSettingManager.swift */; };
@@ -87,6 +88,7 @@
 		7B522482228D4A2700775A70 /* JLRecommandFootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JLRecommandFootView.swift; sourceTree = "<group>"; };
 		7B522484228D4ED800775A70 /* JLRecommendHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JLRecommendHeaderCell.swift; sourceTree = "<group>"; };
 		7B522487228D522C00775A70 /* JLRecommandViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JLRecommandViewModel.swift; sourceTree = "<group>"; };
+		7B6227AA22EFF32D00343D37 /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
 		7B9BE4AA2178229A0010F071 /* UINavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationBar.swift; sourceTree = "<group>"; };
 		7B9BE4AD21782CAA0010F071 /* JLAudioManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JLAudioManager.swift; sourceTree = "<group>"; };
 		7B9BE4AF21782DAE0010F071 /* JLSettingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JLSettingManager.swift; sourceTree = "<group>"; };
@@ -207,6 +209,7 @@
 				7BAB97E62177384100F351BC /* JLBacktone */,
 				7BAB97BC2177377F00F351BC /* Main.storyboard */,
 				7BAB97BF2177378000F351BC /* Assets.xcassets */,
+				7B6227AA22EFF32D00343D37 /* 1.png */,
 				7BAB97C12177378000F351BC /* LaunchScreen.storyboard */,
 				7BAB97C42177378000F351BC /* Info.plist */,
 			);
@@ -526,6 +529,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7BAB97C32177378000F351BC /* LaunchScreen.storyboard in Resources */,
+				7B6227AB22EFF32D00343D37 /* 1.png in Resources */,
 				7BAB97C02177378000F351BC /* Assets.xcassets in Resources */,
 				7BAB97BE2177377F00F351BC /* Main.storyboard in Resources */,
 			);
