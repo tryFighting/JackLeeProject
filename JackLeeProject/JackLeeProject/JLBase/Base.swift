@@ -7,46 +7,63 @@
 //
 
 import UIKit
-@objc protocol BaseViewDataSource {
-    func navigationBarTitle(navigationBar: Base) -> NSMutableAttributedString?
-    func navigationBarBackgroundImage(navigationBar: Base) -> UIImage?
-    func navigationBarBackgroundColor(navigationBar: Base) -> UIColor?
-    func navigationBarHiddenBottomLine(navigationBar: Base) -> Bool
-    func navigationBarHeight(navigationBar: Base) -> CGFloat
-    
-    func navigationBarLeft(navigationBar: Base) -> UIView
-    func navigationBarRight(navigationBar: Base) -> UIView
-    func navigationBarMiddle(navigationBar: Base) -> UIView
-    func navigationBarLeftButton(navigationBar: Base,left: UIButton) -> UIImage
-    func navigationBarRightButton(navigationBar: Base,right: UIButton) -> UIImage
-}
-@objc protocol BaseViewDelegate {
-    func leftButton(navigationBar: Base,left: UIView)
-    func rightButton(navigationBar: Base,right: UIView)
-    func titleClickEvent(navigationBar: Base,title: UILabel)
-}
 
 class Base: UIView {
     var delegate: BaseViewDelegate?
-    var datasource: BaseViewDataSource?
+    var backImage: UIImage?
+   private var _datasource: BaseViewDataSource?
+    
+    var datasource: BaseViewDataSource?{
+        get{
+            return _datasource
+        }set{
+            _datasource = newValue
+            ///数据源协议背景颜色
+            self.backgroundColor = self.datasource?.navigationBarBackgroundColor!(navigationBar: self) 
+            ///数据源协议是否隐藏分割线
+            self.bottomBlackLineView.isHidden = self.datasource?.navigationBarHiddenBottomLine(navigationBar: self) ?? false
+            
+            ///数据源协议背景图片
+            self.backImage = self.datasource?.navigationBarBackgroundImage(navigationBar: self)
+             self.layer.contents = self.backImage?.cgImage
+            
+            ///数据源的文本属性
+            self.title = self.datasource?.navigationBarTitle(navigationBar: self)
+        }
+    }
     var bottomBlackLineView: UIView
     let titleView: UILabel
     let leftView: UIView
     let rightView: UIView
-//    let title: NSMutableAttributedString
-//    let backImage: UIImage?
+    private var _title: NSMutableAttributedString?
+    var title: NSMutableAttributedString?{
+        get{
+            return _title
+        }set{
+            _title = newValue
+            self.titleView.textColor = UIColor.black
+            self.titleView.numberOfLines = 0
+            self.titleView.textAlignment = NSTextAlignment.center
+            self.titleView.isUserInteractionEnabled = true
+            self.titleView.lineBreakMode = NSLineBreakMode.byClipping
+            self.titleView.attributedText = _title
+        }
+    }
+    
+  
     override init(frame: CGRect) {
         
         self.bottomBlackLineView = UIView()
         self.bottomBlackLineView.backgroundColor = UIColor.red
         self.titleView = UILabel()
-        self.titleView.backgroundColor = UIColor.yellow
+        self.titleView.backgroundColor = UIColor.white
         
         self.leftView = UIView()
-        self.leftView.backgroundColor = UIColor.blue
+        self.leftView.backgroundColor = UIColor.white
         
         self.rightView = UIView()
-        self.rightView.backgroundColor = UIColor.green
+        self.rightView.backgroundColor = UIColor.white
+        
         
         super.init(frame: frame)
         
@@ -65,10 +82,12 @@ class Base: UIView {
         
         let middle = UITapGestureRecognizer(target: self, action: #selector(click(sender2:)))
         self.titleView.addGestureRecognizer(middle)
+       
         
         ///设置数据源页面
         setupDataSourceUI()
-       
+
+        
     }
     @objc func click(sender: UITapGestureRecognizer){
         delegate?.leftButton(navigationBar: self, left: sender.view!)
@@ -108,12 +127,10 @@ class Base: UIView {
 
 extension Base{
     func setupDataSourceUI(){
-        
+       
         let time: TimeInterval = 10.0
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + time) {
-            
+        
         }
-        
-        
     }
 }

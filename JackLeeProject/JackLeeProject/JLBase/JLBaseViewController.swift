@@ -13,7 +13,7 @@ class JLBaseViewController: UIViewController {
         super.viewDidLoad()
 
         setupNavigationBar()
-        
+        self.title = "我是基础类"
         self.navigationController?.navigationBar.isHidden = true
         
         let baseV = Base(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: 64))
@@ -22,8 +22,9 @@ class JLBaseViewController: UIViewController {
         baseV.delegate = self
         baseV.datasource = self
         self.view.addSubview(baseV)
-        
-        baseV.backgroundColor = baseV.datasource?.navigationBarBackgroundColor(navigationBar: baseV)
+//        if baseV.datasource?.responds(to:#selector(navigationBarBackgroundColor(navigationBar:))) ?? false {
+//          baseV.backgroundColor = baseV.datasource?.navigationBarBackgroundColor(navigationBar: baseV)
+//        }
     }
     //MARK:视图即将出现
     override func viewWillAppear(_ animated: Bool) {
@@ -80,9 +81,14 @@ extension JLBaseViewController: BaseViewDelegate{
 extension JLBaseViewController: BaseViewDataSource{
     func navigationBarTitle(navigationBar: Base) -> NSMutableAttributedString? {
         ///改变文本的颜色
-        return nil
+        return self.changeTitle(input: self.title ?? self.navigationItem.title ?? "")
     }
-    
+    func changeTitle(input: String) -> NSMutableAttributedString?{
+        let title: NSMutableAttributedString = NSMutableAttributedString(string: input)
+        title.addAttributes([NSAttributedString.Key.foregroundColor : UIColor.red], range: NSMakeRange(0,title.length))
+        title.addAttributes([NSAttributedString.Key.font : UIFont.systemFont(ofSize: 17)], range: NSMakeRange(0,title.length))
+        return title
+    }
     func navigationBarBackgroundImage(navigationBar: Base) -> UIImage? {
         ///导航栏的背景图片
         return UIImage(named: "1.png")
@@ -90,7 +96,7 @@ extension JLBaseViewController: BaseViewDataSource{
     
     func navigationBarBackgroundColor(navigationBar: Base) -> UIColor? {
         ///导航栏的背景颜色
-        return UIColor.red
+        return UIColor.white
     }
     
     func navigationBarHiddenBottomLine(navigationBar: Base) -> Bool {

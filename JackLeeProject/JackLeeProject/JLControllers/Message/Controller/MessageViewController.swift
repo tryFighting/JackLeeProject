@@ -12,12 +12,21 @@ class MessageViewController: JLBaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "消息"
-        self.navigationController?.navigationBar.isHidden = true
+      self.title = "消息"
+    //self.navigationController?.navigationBar.isHidden = true
         
     }
-    @objc func right(){
-        
+
+}
+extension MessageViewController{
+   override func navigationBarBackgroundColor(navigationBar: Base) -> UIColor? {
+        return UIColor.white
     }
-   
+   override func navigationBarHiddenBottomLine(navigationBar: Base) -> Bool {
+        return true
+    }
+   override func navigationBarTitle(navigationBar: Base) -> NSMutableAttributedString? {
+        ///改变文本的颜色
+        return self.changeTitle(input: "我的消息")
+    }
 }
