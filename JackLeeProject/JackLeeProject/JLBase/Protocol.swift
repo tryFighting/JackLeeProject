@@ -15,9 +15,13 @@ import UIKit
     func navigationBarHiddenBottomLine(navigationBar: Base) -> Bool
     func navigationBarHeight(navigationBar: Base) -> CGFloat
     
-    func navigationBarLeft(navigationBar: Base) -> UIView
-    func navigationBarRight(navigationBar: Base) -> UIView
-    func navigationBarMiddle(navigationBar: Base) -> UIView
+    ///自定义左边视图
+    func navigationBarLeft(navigationBar: Base) -> UIView?
+    ///自定义右边视图
+    func navigationBarRight(navigationBar: Base) -> UIView?
+    ///自定义中间视图
+    func navigationBarMiddle(navigationBar: Base) -> UIView?
+    
     func navigationBarLeftButton(navigationBar: Base,left: UIButton) -> UIImage
     func navigationBarRightButton(navigationBar: Base,right: UIButton) -> UIImage
 }

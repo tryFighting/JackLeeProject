@@ -29,3 +29,13 @@ class SearchViewController: JLBaseViewController {
     */
 
 }
+extension SearchViewController{
+    override func navigationBarTitle(navigationBar: Base) -> NSMutableAttributedString? {
+        ///改变文本的颜色
+        return self.changeTitle(input: "我的搜索")
+    }
+    override func navUIControllerNeedNavBar(navUIController: JLBaseViewController) -> Bool {
+        return true
+    }
+}
+

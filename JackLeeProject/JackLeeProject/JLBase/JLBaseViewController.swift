@@ -7,24 +7,24 @@
 //
 
 import UIKit
-
+@objc protocol BaseUIViewControllerDataSource {
+    @objc optional func navUIControllerNeedNavBar(navUIController: JLBaseViewController) -> Bool
+}
 class JLBaseViewController: UIViewController {
+    lazy var baseV: Base = {
+        let base = Base(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: 0))
+        base.isHidden = !navUIControllerNeedNavBar(navUIController: self)
+        base.backgroundColor = UIColor.white
+        base.delegate = self
+        base.datasource = self
+        return base
+    }()
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.view.addSubview(baseV)
         setupNavigationBar()
         self.title = "我是基础类"
         self.navigationController?.navigationBar.isHidden = true
-        
-        let baseV = Base(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: 64))
-        
-        baseV.backgroundColor = UIColor.white
-        baseV.delegate = self
-        baseV.datasource = self
-        self.view.addSubview(baseV)
-//        if baseV.datasource?.responds(to:#selector(navigationBarBackgroundColor(navigationBar:))) ?? false {
-//          baseV.backgroundColor = baseV.datasource?.navigationBarBackgroundColor(navigationBar: baseV)
-//        }
     }
     //MARK:视图即将出现
     override func viewWillAppear(_ animated: Bool) {
@@ -44,16 +44,6 @@ class JLBaseViewController: UIViewController {
         navigationItem.rightBarButtonItem = rightButtonItem
         
     }
-   
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
 
@@ -78,6 +68,11 @@ extension JLBaseViewController: BaseViewDelegate{
         print(left)
     }
 }
+extension JLBaseViewController: BaseUIViewControllerDataSource{
+    func navUIControllerNeedNavBar(navUIController: JLBaseViewController) -> Bool {
+        return true
+    }
+}
 extension JLBaseViewController: BaseViewDataSource{
     func navigationBarTitle(navigationBar: Base) -> NSMutableAttributedString? {
         ///改变文本的颜色
@@ -91,7 +86,7 @@ extension JLBaseViewController: BaseViewDataSource{
     }
     func navigationBarBackgroundImage(navigationBar: Base) -> UIImage? {
         ///导航栏的背景图片
-        return UIImage(named: "1.png")
+        return nil
     }
     
     func navigationBarBackgroundColor(navigationBar: Base) -> UIColor? {
@@ -106,20 +101,32 @@ extension JLBaseViewController: BaseViewDataSource{
     
     func navigationBarHeight(navigationBar: Base) -> CGFloat {
         ///设置导航栏的高度
-        return 44
+        
+        return UIApplication.shared.statusBarFrame.height + 44;
     }
     
-    func navigationBarLeft(navigationBar: Base) -> UIView {
+    func navigationBarLeft(navigationBar: Base) -> UIView? {
         ///设置左部视图
-        return UIView()
+        let view = UIView(frame: CGRect(x: 0, y: 0, width: 200, height: 30))
+
+        let left = UIView.init(frame: CGRect(x: 10, y: 20, width: 30, height: 30))
+        left.backgroundColor = UIColor.green
+        view.addSubview(left)
+
+        let click: UIButton = UIButton(frame: CGRect(x: 100, y: 20, width: 30, height: 30))
+        click.backgroundColor = UIColor.red
+        view.addSubview(click)
+        return view
     }
     
-    func navigationBarRight(navigationBar: Base) -> UIView {
-        return UIView()
+    func navigationBarRight(navigationBar: Base) -> UIView? {
+        let right = UIView.init(frame: CGRect(x:0, y: 20, width: 30, height: 30))
+        right.backgroundColor = UIColor.yellow
+        return nil
     }
     
-    func navigationBarMiddle(navigationBar: Base) -> UIView {
-        return UIView()
+    func navigationBarMiddle(navigationBar: Base) -> UIView? {
+        return nil
     }
     
     func navigationBarLeftButton(navigationBar: Base, left: UIButton) -> UIImage {

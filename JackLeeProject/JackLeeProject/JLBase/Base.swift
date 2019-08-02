@@ -29,6 +29,18 @@ class Base: UIView {
             
             ///数据源的文本属性
             self.title = self.datasource?.navigationBarTitle(navigationBar: self)
+            
+            ///三个视图数据源
+            let view1 = self.datasource?.navigationBarLeft(navigationBar: self)
+            let view2 = self.datasource?.navigationBarRight(navigationBar: self)
+            if let left = view1 {
+                self.leftView.addSubview(left)
+            }
+            if let right = view2{
+                self.rightView.addSubview(right)
+            }
+            ///导航栏高度
+            self.mj_size = CGSize(width: UIScreen.main.bounds.size.width, height: (self.datasource?.navigationBarHeight(navigationBar: self))!)
         }
     }
     var bottomBlackLineView: UIView

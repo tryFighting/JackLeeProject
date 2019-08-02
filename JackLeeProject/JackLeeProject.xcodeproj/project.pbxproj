@@ -52,6 +52,7 @@
 		7BBD05D522A12A70003B0611 /* MyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BBD05D422A12A70003B0611 /* MyTableViewCell.swift */; };
 		7BBD05D722A12D14003B0611 /* JLLayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BBD05D622A12D14003B0611 /* JLLayerView.swift */; };
 		7BD7848922E98DEB00FFC406 /* Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD7848822E98DEB00FFC406 /* Base.swift */; };
+		7BF1EE7722F42FC900D7B0DA /* JLBaseWebController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF1EE7622F42FC900D7B0DA /* JLBaseWebController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -126,6 +127,7 @@
 		7BBD05D422A12A70003B0611 /* MyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTableViewCell.swift; sourceTree = "<group>"; };
 		7BBD05D622A12D14003B0611 /* JLLayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JLLayerView.swift; sourceTree = "<group>"; };
 		7BD7848822E98DEB00FFC406 /* Base.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Base.swift; sourceTree = "<group>"; };
+		7BF1EE7622F42FC900D7B0DA /* JLBaseWebController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JLBaseWebController.swift; sourceTree = "<group>"; };
 		86753B6CE19492C22C2A4BBD /* Pods_JackLeeProjectUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JackLeeProjectUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BAF7A16C0F943D03B9F9E18 /* Pods-JackLeeProjectTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JackLeeProjectTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-JackLeeProjectTests/Pods-JackLeeProjectTests.release.xcconfig"; sourceTree = "<group>"; };
 		D740C672C322AF04C0FCA380 /* Pods-JackLeeProjectTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JackLeeProjectTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JackLeeProjectTests/Pods-JackLeeProjectTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -248,6 +250,7 @@
 			isa = PBXGroup;
 			children = (
 				7BAB97EA2177397C00F351BC /* JLBaseViewController.swift */,
+				7BF1EE7622F42FC900D7B0DA /* JLBaseWebController.swift */,
 				7B9BE4AA2178229A0010F071 /* UINavigationBar.swift */,
 				7BD7848822E98DEB00FFC406 /* Base.swift */,
 				7B61E17D22F139390033B1EA /* Protocol.swift */,
@@ -636,6 +639,7 @@
 				7B522477228D391200775A70 /* JLClassifyViewController.swift in Sources */,
 				7B522485228D4ED800775A70 /* JLRecommendHeaderCell.swift in Sources */,
 				7B9BE4B021782DAE0010F071 /* JLSettingManager.swift in Sources */,
+				7BF1EE7722F42FC900D7B0DA /* JLBaseWebController.swift in Sources */,
 				7B52247F228D3FE300775A70 /* JLRecommendModel.swift in Sources */,
 				7B52247B228D393A00775A70 /* JLLiveViewController.swift in Sources */,
 				7B522488228D522C00775A70 /* JLRecommandViewModel.swift in Sources */,

@@ -29,4 +29,12 @@ extension MessageViewController{
         ///改变文本的颜色
         return self.changeTitle(input: "我的消息")
     }
+    override func navigationBarBackgroundImage(navigationBar: Base) -> UIImage? {
+        return UIImage(named: "1.png")
+    }
+    override func leftButton(navigationBar: Base, left: UIView) {
+        let web = JLBaseWebController()
+        web.loadUrlString = "http://www.baidu.com"
+        self.navigationController?.pushViewController(web, animated: true)
+    }
 }
